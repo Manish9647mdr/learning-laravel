@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
+    <title>{{ $heading }} </title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -23,7 +23,7 @@
                         <div class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                            <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+                            <x-nav-link href="/jobs" :active="request()->is('about')">Jobs Listings</x-nav-link>
                             <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
         <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <x-nav-link href="/">Home</x-nav-link>
-                <x-nav-link href="/about">About</x-nav-link>
+                <x-nav-link href="/jobs">Jobs Listings</x-nav-link>
                 <x-nav-link href="/contact">Contact</x-nav-link>
             </div>
         </el-disclosure>
