@@ -2,11 +2,22 @@
     <x-slot:heading>
         Jobs Listings
     </x-slot:heading>
-    @foreach ($jobs as $job)
-        <li>
-            <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
+    {{--
+    The N+1 problems refers to database queries executed within a loop, rather
+    then making a single query that loads all of the relevant data up front.
+    --}}
+    <div class="space-y-2">
+        @foreach ($jobs as $job)
+        <a href="/jobs/{{ $job['id'] }}" class="block px-4 py-4 border border-gray-200 rounded-lg">
+
+            <div class="font-bold text-blue-500">
+                {{ $job->employer->name }}
+            </div>
+
+            <div>
                 <strong>{{ $job['title'] }}</strong> : Pays {{ $job['salary'] }} per year
-            </a>
-        </li>
-    @endforeach
+            </div>
+        </a>
+        @endforeach
+    </div>
 </x-layout>
