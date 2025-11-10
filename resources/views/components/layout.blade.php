@@ -23,7 +23,7 @@
                         <div class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                            <x-nav-link href="/jobs" :active="request()->is('about')">Jobs Listings</x-nav-link>
+                            <x-nav-link href="/jobs" :active="request()->is('about')">Jobs</x-nav-link>
                             <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
         <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <x-nav-link href="/">Home</x-nav-link>
-                <x-nav-link href="/jobs">Jobs Listings</x-nav-link>
+                <x-nav-link href="/jobs">Jobs</x-nav-link>
                 <x-nav-link href="/contact">Contact</x-nav-link>
             </div>
         </el-disclosure>
