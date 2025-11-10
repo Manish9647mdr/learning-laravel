@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.layout>
     <x-slot:heading>
         Job
     </x-slot:heading>
@@ -7,4 +7,4 @@
     <p>
         This job pay {{ $job['salary'] }} per year.
     </p>
-</x-layout>
+</x-layouts.layout>

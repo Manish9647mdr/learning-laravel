@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.layout>
     <x-slot:heading>
         Create Job
     </x-slot:heading>
@@ -18,6 +18,9 @@
                                 <input id="title" type="text" name="title" placeholder="Please enter the title"
                                     class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm" />
                             </div>
+                            @error('title')
+                            <p class="text-red-700 mx-2 ">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -30,6 +33,9 @@
                                 <input id="salary" type="text" name="salary" placeholder="$50,000 Per Year"
                                     class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm" />
                             </div>
+                            @error('salary')
+                            <p class="text-red-700 mx-2 ">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -46,4 +52,4 @@
         </div>
     </form>
 
-</x-layout>
+</x-layouts.layout>

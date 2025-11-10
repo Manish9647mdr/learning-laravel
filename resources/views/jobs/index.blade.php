@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.layout>
     <x-slot:heading>
         Jobs Listings
     </x-slot:heading>
@@ -24,4 +24,4 @@
     <div class="mt-3">
         {{ $jobs->links() }}
     </div>
-</x-layout>
+</x-layouts.layout>
