@@ -29,6 +29,15 @@
                     </div>
                 </div>
 
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        @guest
+                        <x-navigation.nav-link href="/login" :active="request()->is('/login')">Log In</x-navigation.nav-link>
+                        <x-navigation.nav-link href="/register" :active="request()->is('/register')">Register</x-navigation.nav-link>
+                        @endguest
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -37,6 +46,11 @@
                 <x-navigation.nav-link href="/">Home</x-navigation.nav-link>
                 <x-navigation.nav-link href="/jobs">Jobs</x-navigation.nav-link>
                 <x-navigation.nav-link href="/contact">Contact</x-navigation.nav-link>
+
+                @guest
+                <x-navigation.nav-link href="/login">Log In</x-navigation.nav-link>
+                <x-navigation.nav-link href="/register">Register</x-navigation.nav-link>
+        @endguest
             </div>
         </el-disclosure>
     </nav>
