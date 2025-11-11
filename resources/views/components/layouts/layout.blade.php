@@ -46,7 +46,7 @@
             <h1 class="text-3xl font-bold tracking-tight text-gray-900">
                 {{ $heading }}
             </h1>
-           <x-forms.button href="/jobs/create">Create Job</x-forms.button>
+           <x-navigation.button href="/jobs/create">Create Job</x-navigation.button>
         </div>
     </header>
 

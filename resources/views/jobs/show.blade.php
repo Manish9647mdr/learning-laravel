@@ -9,6 +9,6 @@
     </p>
 
     <p class="mt-6">
-        <x-forms.button href="/jobs/{{ $job->id }}/edit">Edit Job</x-forms.button>
+        <x-navigation.button href="/jobs/{{ $job->id }}/edit">Edit Job</x-navigation.button>
     </p>
 </x-layouts.layout>
