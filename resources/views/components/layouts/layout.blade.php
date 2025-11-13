@@ -35,6 +35,12 @@
                         <x-navigation.nav-link href="/login" :active="request()->is('/login')">Log In</x-navigation.nav-link>
                         <x-navigation.nav-link href="/register" :active="request()->is('/register')">Register</x-navigation.nav-link>
                         @endguest
+                        @auth
+                        <form method="POST" action="/logout">
+                            @csrf
+                            <x-forms.button>Log Out</x-forms.button>
+                        </form>
+                        @endauth
                     </div>
                 </div>
 
@@ -50,7 +56,7 @@
                 @guest
                 <x-navigation.nav-link href="/login">Log In</x-navigation.nav-link>
                 <x-navigation.nav-link href="/register">Register</x-navigation.nav-link>
-        @endguest
+                @endguest
             </div>
         </el-disclosure>
     </nav>
@@ -60,7 +66,7 @@
             <h1 class="text-3xl font-bold tracking-tight text-gray-900">
                 {{ $heading }}
             </h1>
-           <x-navigation.button href="/jobs/create">Create Job</x-navigation.button>
+            <x-navigation.button href="/jobs/create">Create Job</x-navigation.button>
         </div>
     </header>
 
